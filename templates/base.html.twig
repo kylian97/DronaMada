@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenue sur DronaMada{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        
+        
+        
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/quartz/bootstrap.min.css" integrity="sha512-IB+6St4qBpunHK0bB+aHsuWIDLhzoTKGHO8awAn/S3Gr6fnOUA9CfqhGHOGBYzNzwX4+V6kNZv6nvXAs2jJceA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <link rel="stylesheet" href="{{asset('asset/css/bootstrap.css')}}">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <link href="{{asset('asset/css/bootstrap.min.css')}}" rel="stylesheet">
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" style="color:#e83e8c " href="{{path('home')}}">DronaMada </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/produit">Produits</a>
+        </li>
+    
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar-item-custom textWhite">
+                {% if app.user %}
+                    <a href="{{ path('app_account') }}">Mon compte <small>({{ app.user.firstname }})</small></a> <span>|</span> <a href="{{ path('app_logout') }}" >Déconnexion</a>    
+                {% else %}
+                    <a href="{{ path('app_login') }}">Connexion</a> <span>|</span> <a href="{{ path('register') }}" >Inscription</a>    
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+     
+    </div>
+  </div>
+</nav>
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
