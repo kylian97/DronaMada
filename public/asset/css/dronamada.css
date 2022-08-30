@@ -1,17 +1,18 @@
 /**Nos produits**/
 
 body {
-    
+    position:relative;
 }
 
 
 .footer-custom {
     text-align: center;
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
-    padding-top: 25px;
+    padding: 25px 0 ;
     background-color: #e83283;
+    
 }
 
 .product-item h5 {
