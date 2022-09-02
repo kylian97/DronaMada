@@ -51,6 +51,9 @@
                     <a href="{{ path('app_login') }}">Connexion</a> <span>|</span> <a href="{{ path('register') }}" >Inscription</a>    
                 {% endif %}
             </div>
+           <a href="{{path('cart')}}"> 
+             <img src ="{{asset('asset/image/shopping-cart.png')}}" class="cart-icon" alt="Mon Panier">
+           </a> 
         </div>
     </nav>
      
@@ -60,10 +63,6 @@
 
         {% block content %}{% endblock %}
 
-        <footer class="footer-custom">
-
-          DronaMada
-        
-        </footer>
+      
     </body>
 </html>

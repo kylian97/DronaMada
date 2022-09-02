@@ -7,11 +7,11 @@ body {
 
 .footer-custom {
     text-align: center;
-    position: static;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 25px 0 ;
-    background-color: #e83283;
+    background-color: transparent;
     
 }
 
@@ -43,3 +43,6 @@ body {
     font-size: 19px;
 }
 
+.cart-icon { 
+    height: 20px;
+}
