@@ -33,7 +33,13 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        
+          # pour accéder a l'espace compte il faut que l'utilisateur soit connecté 
+        - { path: ^/compte, roles: ROLE_USER }
+
+          # pour accéder a commande il faut que l'utilisateur soit connecté 
+        - { path: ^/commande, roles: ROLE_USER }
+        
 
 when@test:
     security:

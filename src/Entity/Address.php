@@ -44,6 +44,14 @@ class Address
     #[ORM\Column(length: 255)]
     private ?string $phone = null;
 
+ 
+    //   traduit en string 
+    public function __toString()
+    {
+        return $this->getName().'[br]'.$this->getAddress().'[br]'.$this->getCity().' - '. $this->getCountry();
+        // les br vont s'afficher sur la page, donc aller voir dans order/index.html.twig pour voir comment y remédier
+    }
+
     public function getId(): ?int
     {
         return $this->id;

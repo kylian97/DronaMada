@@ -3,6 +3,8 @@
 {% block title %}DronaMada - Connexion{% endblock %}
 
 {% block content %}
+
+
 <div class="container mt-5 mb-5">
     <form method="post">
      {% if error %}
@@ -36,9 +38,11 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary mt-4" type="submit">
-        Connexion
+    <button class="btn btn-lg btn-block btn-primary mt-4" type="submit">
+        Se connecter
     </button>
+    <hr>
+    <p class="text-center"> Ou souhaitez-vous <a href="{{path('register')}}">Créer un compte </a> ? </p>
 </form>
 
 </div>
