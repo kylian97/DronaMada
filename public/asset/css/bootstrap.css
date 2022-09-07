@@ -2,31 +2,28 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #2980b9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
     
     
 }
 .textWhite {
-    color: #fff;
+    color: black;
     font-weight: bold;
 }
 .textWhite:hover {
     text-decoration: none;
 }
 .hoverWhite:hover {
-    color: white;
+    color: #a1c4fd;
 }
 .navbar {
-    background: #2980b9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: transparent;
+   position:absolute;
    
 }
 
 .navbar-brand {
-   color:  #e83283;
+   color:  #a1c4fd;
    font-weight:bold;
    font-size: 1.2rem;
 }
@@ -37,8 +34,8 @@ a:hover {
     text-decoration: none;
     color: inherit;
 }
-.product-price{
-    color : #fff;
+.col-md-4{
+    color : black;
 }
 
 .section-products {

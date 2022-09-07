@@ -1,8 +1,5 @@
 /**Nos produits**/
 
-body {
-    position:relative;
-}
 
 
 .footer-custom {
@@ -54,10 +51,16 @@ margin: 0 auto;
 }
 
 .form-check {
-    background-color: #e83232;
+   
     padding: 20px 65px;
     margin-top: 7px;
     
+}
+
+.form-chek-input{
+
+color: black;
+
 }
 
 .col-form-label{

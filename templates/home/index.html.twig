@@ -36,8 +36,9 @@
 
 
 <main role="main">
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+{% block carousel %}
+    
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -45,7 +46,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"> <img src="{{asset('asset/image/carousel1.jpg')}}" alt=""> </svg>
+                <img src="{{asset('asset/image/carousel1.jpg')}}" alt=""> 
                 <div class="container">
                     <div class="carousel-caption text-left">
                         <h1>Example headline.</h1>
@@ -55,7 +56,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><img src="{{asset('asset/image/carousel2.jpg')}}" alt=""></svg>
+                <img src="{{asset('asset/image/carousel2.jpg')}}" alt="">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"> <img src="{{asset('asset/image/carousel3.jpg')}}" alt=""> </svg>
+                <img src="{{asset('asset/image/carousel3.jpg')}}" alt="">
                 <div class="container">
                     <div class="carousel-caption text-right">
                         <h1>One more for good measure.</h1>
@@ -84,6 +85,8 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+{% endblock %}
+    
 
 
     <!-- Marketing messaging and featurettes
@@ -92,7 +95,7 @@
 
     <div class="container marketing">
 
-        <!-- Three columns of text below the carousel -->
+        {# <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
@@ -112,7 +115,7 @@
                 <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+        </div><!-- /.row --> #}
 
 
         <!-- START THE FEATURETTES -->
