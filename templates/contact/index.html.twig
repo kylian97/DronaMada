@@ -3,8 +3,15 @@
 {% block title %}DronaMada Contact {% endblock %}
 
 {% block content %}
+<style>
 
-<div class="container">
+ body {
+    height: 100vh;
+    text-shadow:1px 1px 2px black;
+ }
+
+</style>
+<div class="container mt-5">
 
 {% for message in app.flashes('success') %}
 

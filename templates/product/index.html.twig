@@ -6,7 +6,9 @@
 
   <style>
     body {
-        color: black;
+        color: white;
+        
+        font-weight: bold;
         }
   </style>
 
@@ -17,28 +19,34 @@
     <div class="row">
 
       <div class="col-md-3">
-        <h3> Filtre </h3>
+        <h3 class="shadowBlack" style="font-weight: bold;"> Filtre </h3>
           {{form(form)}}
 
       </div>
       <div class="col-md-9">
-        <h3>Nos Produits </h3>
+        <h3 class="shadowBlack" style="font-weight: bold;" >Nos Produits </h3>
 
         <div class="row product-container">
 
           {% for product in products %}
 
           <div class="col-md-4">
+            
+            <div class="product-item text-center card">
 
-            <div class="product-item text-center">
+               <img class="product-image" src="/uploads/{{product.illustration}}"
+                  alt="{{ product.name }}" class="img-fluid"> 
 
-              <a href="{{path('app_product', {'slug' : product.slug })}}"> <img src="/uploads/{{product.illustration}}"
-                  alt="{{ product.name }}" class="img-fluid"> </a>
+                  <hr style="background-color:#1995AD; padding: 0.5px; margin-top:0; opacity:1">
 
               <h5> {{ product.name }} </h5>
-              <span class="product-subtitle"> {{product.subtitle}} </span>
+              <hr style="background-color:#1995AD; padding:0.5px; opacity:1;">
+              {# <span class="product-subtitle"> {{product.subtitle}} </span> #}
               <span class="product-price">{{(product.price / 100)|number_format(2, ',', '.') }} €</span>
-
+              
+              <a href="{{path('app_product', {'slug' : product.slug })}}">
+                 <button class=" btn-sm btn-primary" style="font-weight:normal; border-radius: 10px; margin-top: 30px;">Voir Détail </button>
+               </a>
             </div>
 
 

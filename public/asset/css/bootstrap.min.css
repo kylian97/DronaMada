@@ -72,7 +72,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
-    background-color: #fff;
+    background: #F1F1F2
     
 }
 
@@ -171,13 +171,14 @@ sup {
 }
 
 a {
-    color: black;
-    text-decoration: none;
-    background-color: transparent
+    
+    background-color: transparent;
+    font-size: 1.2rem;
+    
 }
 
 a:hover {
-    color: #a1c4fd;
+    color: #1995AD;
 }
 
 a:not([href]):not([class]) {
@@ -533,7 +534,7 @@ mark {
 
 code {
     font-size: 87.5%;
-    color: #e83e8c;
+    color: #1995AD;
     word-wrap: break-word
 }
 
@@ -1282,7 +1283,8 @@ pre code {
     .col-md-4 {
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
-        max-width: 33.333333%
+        max-width: 33.333333%;
+        
     }
 
     .col-md-5 {
@@ -2335,9 +2337,9 @@ pre code {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #e83e8c;
+    border-color: #1995AD;
     outline: 0;
-    box-shadow: 0 0 0 .1rem #e83e8c
+    box-shadow: 0 0 0 .1rem #1995AD
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2484,19 +2486,35 @@ textarea.form-control {
 .form-check {
     position: relative;
     display: block;
-    padding-left: 1.25rem
+    padding-left: 2rem;
+    background-color: #BCBABE;
+    border-radius: 10px;
 }
+
 
 .form-check-input {
     position: absolute;
     margin-top: .3rem;
-    margin-left: -1.25rem
+    margin-left: -1.25rem;
+    background-color:#A1D6E2
 }
 
 .form-check-input:disabled~.form-check-label,
 .form-check-input[disabled]~.form-check-label {
     color: #6c757d
 }
+.form-check-input:checked {
+    background-color: #1995AD;
+    border-color: #1995AD;
+   
+}
+.form-check-input:focus {
+    border-color: rgba(255,255,255,.4);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(161 214 226 / 25%);
+}
+
+
 
 .form-check-label {
     margin-bottom: 0
@@ -2883,14 +2901,18 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #e83e8c;
-    border-color: #e83e8c
+    background-color: #1995AD;
+    border-color: #1995AD;
+    font-weight:bold
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #fb61a9;
-    border-color: #e83e8c
+    background-color: white;
+    border: 2px solid #1995AD;
+    color:#1995AD;
+    font-weight: bold;
+    text-shadow:none
 }
 
 .btn-primary.focus,
@@ -4770,10 +4792,16 @@ input[type=submit].btn-block {
     padding-top: .3125rem;
     padding-bottom: .3125rem;
     margin-right: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.7rem;
     line-height: inherit;
-    white-space: nowrap
+    white-space: nowrap;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+ 
+
 }
+
+ 
 
 .navbar-brand:focus,
 .navbar-brand:hover {
@@ -5170,22 +5198,23 @@ input[type=submit].btn-block {
     color: rgba(0, 0, 0, .9)
 }
 
-.navbar-dark .navbar-brand {
-    color: #fff
-}
 
-.navbar-dark .navbar-brand:focus,
+
+/* .navbar-dark .navbar-brand:focus,
 .navbar-dark .navbar-brand:hover {
-    color: #5695fb
-}
+    color: #CC0551
+} */
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white
+    color:white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px black;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #5695fb
+    color: #A1D6E2
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -5229,15 +5258,23 @@ input[type=submit].btn-block {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #BCBABE;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
+    border-radius: 1.1rem;
+   
+    height: 400px;
+    border: 1px solid #1995AD;
+    
+}
+.card img { 
+    border-radius: 1.1rem 1.1rem 0 0;
 }
 
 .card>hr {
     margin-right: 0;
     margin-left: 0
+    
 }
 
 .card>.list-group {
@@ -7317,7 +7354,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-    background-color: #e83e8c !important
+    background-color: #1995AD !important
 }
 
 a.bg-primary:focus,
@@ -11233,7 +11270,9 @@ button.bg-dark:hover {
 }
 
 .text-primary {
-    color: #007bff !important
+    color: #B3C100 !important;
+    text-shadow: none;
+    font-weight: bold;
 }
 
 a.text-primary:focus,

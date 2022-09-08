@@ -4,6 +4,14 @@
 
 {% block content %}
 
+<style>
+
+   body { 
+    height: 100vh;
+   }
+
+</style>
+
 
 <div class="container mt-5 mb-5">
     <form method="post">
@@ -17,10 +25,10 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal mb-4">Merci de vous connecter</h1>
-    <label for="inputEmail">Votre email</label>
+    <h1 class="h3 mb-3 font-weight-bold mb-4 shadowBlack">Merci de vous connecter</h1>
+    <label for="inputEmail" class="colorLabel">Votre email</label>
     <input type="email" value="{{ last_username }}" name="email" placeholder="Votre adresse email" id="inputEmail" class="form-control mb-4" autocomplete="email" required autofocus>
-    <label for="inputPassword ">Mot de passe</label>
+    <label for="inputPassword" class="colorLabel">Mot de passe</label>
     <input type="password" name="password" id="inputPassword" placeholder= "Votre mot de passe " class="form-control" autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token"
@@ -42,7 +50,7 @@
         Se connecter
     </button>
     <hr>
-    <p class="text-center"> Ou souhaitez-vous <a href="{{path('register')}}">Créer un compte </a> ? </p>
+    <p class="text-center " style="font-weight: bold; font-size: 1.3rem;" > Ou souhaitez-vous <a href="{{path('register')}}" class="colorSwitch">Créer un compte </a> ? </p>
 </form>
 
 </div>
