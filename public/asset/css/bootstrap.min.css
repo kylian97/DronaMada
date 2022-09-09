@@ -5263,7 +5263,7 @@ input[type=submit].btn-block {
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 1.1rem;
    
-    height: 400px;
+    height: 320px;
     border: 1px solid #1995AD;
     
 }
@@ -11348,7 +11348,7 @@ a.text-dark:hover {
 }
 
 .text-muted {
-    color: #6c757d !important
+    color: #1995AD !important
 }
 
 .text-black-50 {

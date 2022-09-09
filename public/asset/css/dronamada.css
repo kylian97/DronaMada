@@ -147,13 +147,13 @@ margin-top: 22px;
 
 .colorSwitch { 
 
-color:#A1D6E2;
+color:#1995AD;
 
 }
 
 .colorSwitch:hover{
 
-color:#1995AD;
+color:#A1D6E2;
     
 }
 
@@ -161,7 +161,20 @@ color:#1995AD;
     border-radius: 20px;
 }
 
+.hrHome {
+    padding : 0.5px 0 ;
+    background-color: #1995AD;
+    opacity: 1;
+    border-radius: 3rem;
+}
+
 
 .colorLabel {
     color:#1995AD;
+}
+
+.shadowPrimary {
+
+    -webkit-text-stroke: 1px #1995AD;
+    
 }
