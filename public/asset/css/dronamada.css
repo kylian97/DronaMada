@@ -120,9 +120,11 @@ margin-top: 22px;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px; 
-    height: 6vh;
+    height: 8vh;
     width:100%;
 }
+
+
 
 .product-image {
     width: 100%;
@@ -177,4 +179,31 @@ color:#A1D6E2;
 
     -webkit-text-stroke: 1px #1995AD;
     
+}
+
+.img-nosProduits {
+    border-radius: 20px;
+}
+
+
+.colorGlacier{
+
+    color: #A1D6E2;
+    font-weight: bold;
+    text-shadow:1px 1px 1px black;
+}
+
+@media (max-width: 992px){
+
+
+    .container-nav{
+        display:block;
+        
+    }
+
+    .navbar-toggler{
+        float:right;
+    }
+
+    /* changer le hamburger menu  */
 }

@@ -3,27 +3,37 @@
 {% block title %}{{product.name}} - DronaMada{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-<div class="row">
 
-  <div class="col-md-5">
+<style>
+    body {
+        color: black;
+        height: 92vh;
+        }
+  </style>
+<div class="container d-flex align-items-center" style="height:100%;" >
+<div class="row container">
+
+  <div class="col-md-6 my-auto">
     
-     <img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid">
+     <img src="/uploads/{{product.illustration}}" alt="{{product.name}}" class="img-fluid img-nosProduits">
   
   </div>
 
-  <div class="col-md-7 my-auto">
+  <div class="col-md-6 my-auto">
     <h3> {{product.name}} </h3>
     <p>{{product.subtitle}}</p>
     <span class="product-page-price">{{(product.price / 100)|number_format(2, ',', '.') }} € </span>
 
-  <hr>
+  <hr class="hrHome">
      
      <p>
         {{product.description}}
      </p>
+
+     <hr class="hrHome">
+
      <a href="{{path('add_to_cart', {'id': product.id})}}" class="btn btn-primary">Ajouter au panier </a>
-  <hr>
+  
 
   </div>
 </div>
